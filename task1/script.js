@@ -5,7 +5,7 @@ const ans = bubbleSort(a);
 console.log('output:', ans);
 
 function bubbleSort(a) {
-    const res = a;
+    const res = [...a];
     for (let i = 0; i < res.length; i++) {
         for (let j = i + 1; j < res.length; j++) {
             if (res[j - 1] > res[j]) {
