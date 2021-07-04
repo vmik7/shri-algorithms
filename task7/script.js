@@ -1,5 +1,5 @@
 function inverseList(input) {
-    if (input.value === undefined) {
+    if (input.next === undefined) {
         return {};
     }
     let result = null;
