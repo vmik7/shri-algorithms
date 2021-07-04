@@ -1,11 +1,5 @@
-const a = [7, 1, 3, 4, 11];
-console.log('input:', a);
-
-const ans = selectionSort(a);
-console.log('output:', ans);
-
-function selectionSort(a) {
-    const res = [...a];
+function selectionSort(input) {
+    const res = [...input];
     for (let i = 0; i < res.length; i++) {
         let posOfMin = i;
         for (let j = i + 1; j < res.length; j++) {
