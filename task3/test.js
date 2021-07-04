@@ -1,26 +1,26 @@
 describe('Баланс скобок', function () {
-    it('[{a}{(a)}]{[a]}', function () {
+    it('[{a}{(a)}]{[a]} - правильная', function () {
         assert.isOk(isCorrect('[{a}{(a)}]{[a]}', brakets));
     });
-    it('[]{}()()({})', function () {
+    it('[]{}()()({}) - правильная', function () {
         assert.isOk(isCorrect('[]{}()()({})', brakets));
     });
-    it('Пустая строка', function () {
+    it('<пустая строка> - правильная', function () {
         assert.isOk(isCorrect('', brakets));
     });
-    it('[(])', function () {
+    it('[(]) - неправильная', function () {
         assert.isNotOk(isCorrect('[(])', brakets));
     });
-    it('[)', function () {
+    it('[) - неправильная', function () {
         assert.isNotOk(isCorrect('[)', brakets));
     });
-    it('[](', function () {
+    it('[]( - неправильная', function () {
         assert.isNotOk(isCorrect('[](', brakets));
     });
-    it('[])', function () {
+    it('[]) - неправильная', function () {
         assert.isNotOk(isCorrect('[])', brakets));
     });
-    it(')()', function () {
+    it(')() - неправильная', function () {
         assert.isNotOk(isCorrect(')()', brakets));
     });
 });
