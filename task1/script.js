@@ -1,17 +1,13 @@
-const a = [7, 1, 3, 4, 11];
-console.log('input:', a);
-
-const ans = bubbleSort(a);
-console.log('output:', ans);
-
-function bubbleSort(a) {
-    const res = [...a];
-    for (let i = 0; i < res.length; i++) {
-        for (let j = i + 1; j < res.length; j++) {
-            if (res[j - 1] > res[j]) {
-                [res[j], res[j - 1]] = [res[j - 1], res[j]];
+function bubbleSort(input) {
+    const a = [...input];
+    console.log(a);
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 1; j < a.length - i; j++) {
+            if (a[j - 1] > a[j]) {
+                [a[j], a[j - 1]] = [a[j - 1], a[j]];
             }
         }
     }
-    return res;
+    console.log(a);
+    return a;
 }
