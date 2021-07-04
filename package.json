@@ -1,0 +1,11 @@
+{
+    "name": "shri-algorithms",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "prettify": "prettier ./*/**/*.js --write"
+    },
+    "repository": "https://github.com/vmik7/shri-algorithms.git",
+    "author": "vmik7 <vmik7@yandex.ru>",
+    "license": "MIT"
+}
