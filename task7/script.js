@@ -1,18 +1,17 @@
-function inverseList(input) {
-    if (input.next === undefined) {
-        return {};
+function inverseList(list) {
+    if (list.next === undefined) {
+        return list;
     }
-    let result = null;
 
-    let current = input;
+    let prev = null;
+    let current = list;
+
     while (current) {
-        let newResult = {
-            value: current.value,
-            next: result,
-        };
-        result = newResult;
-        current = current.next;
+        let next = current.next;
+        current.next = prev;
+        prev = current;
+        current = next;
     }
 
-    return result;
+    return prev;
 }
